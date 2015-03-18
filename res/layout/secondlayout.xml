@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Second Screen"
+        android:text="Second Screen with a change"
         android:layout_margin="20dp"
         android:id="@+id/textView"
 
