@@ -29,13 +29,5 @@ public class HelloAndroidActivity extends Activity {
     Class<? extends Activity> activityClass = (random.nextBoolean()) ? SecondActivity.class : ThirdActivity.class;
     startActivity(new Intent(this, activityClass));
   }
-
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(uk.me.goff.androidmaven.R.menu.main, menu);
-    return true;
-  }
-
 }
 
