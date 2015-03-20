@@ -33,6 +33,12 @@
             <version>2.4</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.android.support</groupId>
+            <artifactId>support-v4</artifactId>
+            <version>19.0.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -63,7 +69,6 @@
                 <configuration>
                     <excludes>
                         <exclude>**/Test*.java</exclude>
-                        <exclude>**/*Test.java</exclude>
                     </excludes>
                     <argLine>-Xmx1024m</argLine>
                 </configuration>

@@ -8,7 +8,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Second Screen with a change"
         android:layout_margin="20dp"
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
 
          />
 </LinearLayout>
