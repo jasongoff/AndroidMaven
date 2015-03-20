@@ -60,6 +60,5 @@ public class HelloAndroidActivityTest {
     button3.performClick();
     Intent expectedIntent = new Intent(activity, ThirdActivity.class);
     assertThat(shadowOf(activity).peekNextStartedActivity(), is(expectedIntent));
-    assertTrue(false);
   }
 }
