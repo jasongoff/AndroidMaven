@@ -3,7 +3,8 @@ package uk.me.goff.androidmaven;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HelloAndroidActivity extends Activity {
 
@@ -12,18 +13,21 @@ public class HelloAndroidActivity extends Activity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     setTitle("Hello Android!");
-    bindButtonToActivityLaunch(R.id.button, SecondActivity.class);
-    bindButtonToActivityLaunch(R.id.button3, ThirdActivity.class);
+    ButterKnife.inject(this);
   }
 
-  private void bindButtonToActivityLaunch(int buttonId, final Class<? extends Activity> activityClass) {
-    findViewById(buttonId).setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        startActivity(new Intent(getBaseContext(), activityClass));
-      }
-    });
+  @OnClick(R.id.button)
+  void button1Click() {
+    sendStartIntentTo(SecondActivity.class);
+  }
+
+  private void sendStartIntentTo(Class<? extends Activity> activityClass) {
+    startActivity(new Intent(getBaseContext(), activityClass));
+  }
+
+  @OnClick(R.id.button3)
+  void button2Click() {
+    sendStartIntentTo(ThirdActivity.class);
   }
 }
-
 

@@ -33,6 +33,7 @@ public class HelloAndroidActivityTest {
   public void testJunit() {
     assertTrue(true);
   }
+
   @Test
   public void titleIsCorrect() {
     assertTrue(activity.getTitle().toString().equals("Hello Android!"));

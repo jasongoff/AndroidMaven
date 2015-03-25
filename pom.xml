@@ -39,6 +39,12 @@
             <version>19.0.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.jakewharton</groupId>
+            <artifactId>butterknife</artifactId>
+            <version>6.1.0</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
