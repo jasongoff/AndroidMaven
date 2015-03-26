@@ -71,7 +71,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.4.201502262128</version>
+                <version>0.7.1.201405082137</version>
                 <executions>
                     <execution>
                         <goals>
@@ -88,6 +88,13 @@
                     <includes>
                         <include>uk/me/goff/androidmaven/*</include>
                     </includes>
+                    <excludes>
+                        <exclude>**/R.class</exclude>
+                        <exclude>**/BuildConfig.*</exclude>
+                        <exclude>**/R$*.class</exclude>
+                        <exclude>**/*$ViewInjector*.*</exclude>
+                        <exclude>**/Manifest*.*</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
@@ -95,9 +102,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
-                    <excludes>
-                        <exclude>**/Test*.java</exclude>
-                    </excludes>
                     <argLine>${argLine} -Xmx1024m</argLine>
                 </configuration>
             </plugin>
